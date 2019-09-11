@@ -8,17 +8,25 @@ export default class Dashboard extends Component {
 
         this.state = {
             posts: null,
-            groupBy: 'week',
-            isLoaded: false
+            isLoaded: false,
+            cityList: ['Honolulu', 'Seattle', 'Dublin']
         }
     }
 
     render() {
 
+        const cityList = this.state.cityList;
+
         return (
 
             <div className="dashboard">
-                <City />
+                {
+                    cityList.map((item) =>
+                        (<City
+                            cityName={item}
+                        />)
+                    )
+                }
             </div>
 
         )
