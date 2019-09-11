@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Day from './day';
 
 export default class Forecast extends Component {
 
@@ -39,27 +40,22 @@ export default class Forecast extends Component {
 
     render() {
 
-        console.log(this.state.forecast);
-
-        const forecastList = this.state.forecast;
+        let forecastList = this.state.forecast;
 
         return (
             <React.Fragment>
                 {
                     this.state.forecast ?
                         <div className="cityForecast">
-
                             {
                                 forecastList.map((item, index) =>
                                     (
-                                        <div
+                                        <Day
                                             key={index}
-                                            className="day"
-                                        >
-                                            {item.dt}
-                                            <h3>{Math.ceil(item.main.temp)}&deg;C</h3>
-                                            <p>{item.weather[0].description}</p>
-                                        </div>)
+                                            date={item.dt}
+                                            temperature={item.main.temp}
+                                            description={item.weather[0].description}
+                                        />)
                                 )
                             }
 

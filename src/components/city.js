@@ -25,7 +25,7 @@ export default class City extends Component {
                 (result) => {
                     this.setState({
                         isLoaded: true,
-                        weather: result.main
+                        weather: result
                     });
                 },
                 (error) => {
@@ -56,8 +56,8 @@ export default class City extends Component {
                             onClick={this.toggleDetailView}
                         >
                             <h1>{this.state.cityName}</h1>
-                            <div className="currentWeather">Current Weather</div>
-                            <h2>{Math.ceil(this.state.weather.temp)}&deg;C</h2>
+                            <h2 className="tempMain">{Math.ceil(this.state.weather.main.temp)}&deg;C</h2>
+                            <p>{this.state.weather.weather[0].description}</p>
 
                             {
                                 this.state.isDetailView

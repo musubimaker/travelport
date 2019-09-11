@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  background-color: #282c34;
+  background-color: #4a4d56;
   min-height: 100vh;
 }
 
@@ -21,8 +21,16 @@
 
 .cityOverview, .cityForecast {
   color: white;
-  padding: 30px 0px;
+  padding: 20px 0px;
   border-top: 1px solid #4e5769;
+}
+
+.tempMain {
+  font-size: 3em;
+}
+
+.tempForecast {
+  font-size: 2em;
 }
 
 
@@ -36,6 +44,7 @@
 
 .day {
   padding: 20px;
+  order: 2;
 }
 
 footer {
