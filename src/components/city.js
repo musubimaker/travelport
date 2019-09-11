@@ -56,6 +56,7 @@ export default class City extends Component {
                             onClick={this.toggleDetailView}
                         >
                             <h1>{this.state.cityName}</h1>
+                            <p>Right now</p>
                             <h2 className="tempMain">{Math.ceil(this.state.weather.main.temp)}&deg;C</h2>
                             <p>{this.state.weather.weather[0].description}</p>
 
