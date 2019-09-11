@@ -12,19 +12,23 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  padding: 20px 0px;
 }
 
 .App-link {
   color: #61dafb;
 }
 
-.cityOverview {
+.cityOverview, .cityForecast {
   color: white;
   padding: 40px 0px;
-  border-bottom: 1px solid #4e5769;
+  border-top: 1px solid #4e5769;
 }
 
+
 footer {
+  border-top: 1px solid #4e5769;
   margin-top: 50px;
+  padding: 40px 0px;
   color: white;
 }

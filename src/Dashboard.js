@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import City from './components/city'
 
 export default class Dashboard extends Component {
 
@@ -17,18 +18,7 @@ export default class Dashboard extends Component {
         return (
 
             <div className="dashboard">
-                <section className="cityOverview">
-                    <h1>Honolulu</h1>
-                    <div className="currentWeather">Current Weather</div>
-                </section>
-                <section className="cityOverview">
-                    <h1>Seattle</h1>
-                    <div className="currentWeather">Current Weather</div>
-                </section>
-                <section className="cityOverview">
-                    <h1>Dublin</h1>
-                    <div className="currentWeather">Current Weather</div>
-                </section>
+                <City />
             </div>
 
         )
