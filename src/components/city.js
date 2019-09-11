@@ -14,7 +14,6 @@ export default class City extends Component {
             apiUrl: "http://api.openweathermap.org/data/2.5/weather?q=" + this.props.cityName + "&APPID=bd8326266ffeb1b662cf75fadf5dee2a&units=metric"
         }
 
-
         this.toggleDetailView = this.toggleDetailView.bind(this)
     }
 
@@ -63,7 +62,9 @@ export default class City extends Component {
                             {
                                 this.state.isDetailView
                                     ?
-                                    <Forecast />
+                                    <Forecast
+                                        cityName={this.state.cityName}
+                                    />
                                     :
                                     ''
                             }

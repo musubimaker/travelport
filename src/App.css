@@ -26,6 +26,18 @@
 }
 
 
+.cityForecast {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.day {
+  padding: 20px;
+}
+
 footer {
   border-top: 1px solid #4e5769;
   margin-top: 50px;
