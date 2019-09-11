@@ -1,0 +1,55 @@
+.App {
+  text-align: center;
+  background-color: #4a4d56;
+  min-height: 100vh;
+}
+
+.App-header {
+  background-color: #282c34;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  padding: 20px 0px;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.cityOverview, .cityForecast {
+  color: white;
+  padding: 20px 0px;
+  border-top: 1px solid #4e5769;
+}
+
+.tempMain {
+  font-size: 3em;
+}
+
+.tempForecast {
+  font-size: 2em;
+}
+
+
+.cityForecast {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.day {
+  padding: 20px;
+  order: 2;
+}
+
+footer {
+  border-top: 1px solid #4e5769;
+  margin-top: 50px;
+  padding: 40px 0px;
+  color: white;
+}
