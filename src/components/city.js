@@ -13,6 +13,9 @@ export default class City extends Component {
             isLoaded: false,
             apiUrl: "http://api.openweathermap.org/data/2.5/weather?q=" + this.props.cityName + "&APPID=bd8326266ffeb1b662cf75fadf5dee2a&units=metric"
         }
+
+
+        this.toggleDetailView = this.toggleDetailView.bind(this)
     }
 
     componentDidMount() {
@@ -35,19 +38,36 @@ export default class City extends Component {
             )
     }
 
-    render() {
+    toggleDetailView() {
 
-        console.log(this.state.weather);
+        this.setState({
+            isDetailView: (this.state.isDetailView ? false : true)
+        });
+
+    }
+
+    render() {
 
         return (
             <React.Fragment>
                 {
                     this.state.isLoaded ?
 
-                        <section className="cityOverview">
+                        <section className="cityOverview"
+                            onClick={this.toggleDetailView}
+                        >
                             <h1>{this.state.cityName}</h1>
                             <div className="currentWeather">Current Weather</div>
                             <h2>{Math.ceil(this.state.weather.temp)}&deg;C</h2>
+
+                            {
+                                this.state.isDetailView
+                                    ?
+                                    <Forecast />
+                                    :
+                                    ''
+                            }
+
                         </section>
                         :
                         <p>Loading</p>

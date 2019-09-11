@@ -21,8 +21,9 @@ export default class Dashboard extends Component {
 
             <div className="dashboard">
                 {
-                    cityList.map((item) =>
+                    cityList.map((item, index) =>
                         (<City
+                            key={index}
                             cityName={item}
                         />)
                     )
